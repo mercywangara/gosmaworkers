@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Dashboard</title>
+</head>
+<body>
+    <h1>Members</h1>
+    <table border="1">
+        <tr>
+            <th>Member ID</th>
+            <th>Name</th>
+            <th>Phone Contact</th>
+            <th>Current Location</th>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td>{{member.member_id}}</td>
+            <td>{{member.member_name}}</td>
+            <td>{{member.phone_contact}}</td>
+            <td>{{member.current_location}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
